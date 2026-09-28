@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ideastore — Jual Komputer & Laptop Bekas Berkualitas</title>
+<meta name="description" content="ideastore — toko online komputer & laptop bekas berkualitas. Workstation, PC built-up, laptop second siap pakai. COD aman, harga nego.">
+
+<!-- Open Graph (buat preview WA/FB) -->
+<meta property="og:title" content="ideastore — Jual Komputer & Laptop Bekas">
+<meta property="og:description" content="Workstation, PC built-up, laptop second siap pakai. COD aman, harga nego.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ideastoreaja.github.io/">
+
+<!-- Favicon (emoji, no file) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+
+<!-- CSS (relative path — portable ke custom domain) -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-blibli">
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🛒</span>
+      <span class="brand-name">ideastore</span>
+    </a>
+
+    <div class="theme-switcher" title="Ganti tema">
+      <button class="theme-dot dot-lazada" data-theme="theme-lazada" aria-label="Tema Lazada"></button>
+      <button class="theme-dot dot-blibli active" data-theme="theme-blibli" aria-label="Tema Blibli"></button>
+      <button class="theme-dot dot-tokped" data-theme="theme-tokped" aria-label="Tema Tokopedia"></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">Komputer & Laptop Bekas <span class="hero-accent">Berkualitas</span></h1>
+    <p class="hero-sub">Workstation, PC built-up, laptop second — semua siap pakai, sudah dites, dan bisa COD.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" id="statTotal">0</span>
+        <span class="stat-label">Produk</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="statReady">0</span>
+        <span class="stat-label">Siap Pakai</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="statPromo">0</span>
+        <span class="stat-label">Promo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN ===== -->
+<main class="container">
+
+  <!-- Search + Filter -->
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Cari produk... (mis. Z440, Lenovo, Xeon)"
+        autocomplete="off"
+      >
+      <button class="search-clear" id="searchClear" aria-label="Hapus pencarian" hidden>✕</button>
+    </div>
+
+    <div class="filter-tabs" role="tablist">
+      <button class="filter-tab active" data-filter="all" role="tab">Semua</button>
+      <button class="filter-tab" data-filter="ready" role="tab">Siap Pakai</button>
+      <button class="filter-tab" data-filter="promo" role="tab">Promo</button>
+      <button class="filter-tab" data-filter="terjual" role="tab">Terjual</button>
+    </div>
+  </div>
+
+  <!-- Grid Produk -->
+  <div class="product-grid" id="productGrid">
+    <!-- Auto-generated dari produk.json oleh script.js -->
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Memuat produk...</p>
+    </div>
+  </div>
+
+  <!-- Empty State (kalau produk kosong / hasil filter 0) -->
+  <div class="empty-state" id="emptyState" hidden>
+    <div class="empty-icon">📦</div>
+    <h3>Belum ada produk</h3>
+    <p id="emptyMessage">Produk akan muncul di sini.</p>
+  </div>
+
+  <!-- Error State (kalau produk.json gagal load) -->
+  <div class="error-state" id="errorState" hidden>
+    <div class="empty-icon">⚠️</div>
+    <h3>Gagal memuat produk</h3>
+    <p>Pastikan halaman dibuka lewat <strong>local server</strong>, bukan double-click file.</p>
+    <p class="error-hint">Jalankan: <code>python3 -m http.server 8000</code></p>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-icon">🛒</span>
+          <span class="brand-name">ideastore</span>
+        </div>
+        <p class="footer-tagline">Komputer & laptop bekas berkualitas, siap pakai.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Kontak</h4>
+        <a class="footer-wa" id="footerWa" href="#" target="_blank" rel="noopener">
+          💬 WhatsApp
+        </a>
+        <a class="footer-link" id="footerShare" href="#" hidden>🔗 Bagikan</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> ideastore — Dijual oleh pemilik pribadi.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WA BUTTON ===== -->
+<a class="floating-wa" id="floatingWa" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <span class="floating-wa-icon">💬</span>
+</a>
+
+<!-- ===== SCRIPT (relative path) ===== -->
+<script src="script.js"></script>
+</body>
+</html>
