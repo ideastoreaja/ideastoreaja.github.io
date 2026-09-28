@@ -1,5 +1,6 @@
 /* ============================================================
-   ideastore — style.css
+   ideastore — style.css (FULL)
+   Katalog + Detail Produk
    Tema default: Blibli (biru)
    Support: Lazada (orange), Tokopedia (hijau)
    ============================================================ */
@@ -103,7 +104,6 @@ body.theme-tokped {
 }
 
 .brand-icon { font-size: 20px; }
-
 .brand-name { font-size: 18px; }
 
 /* Theme Switcher */
@@ -124,9 +124,7 @@ body.theme-tokped {
 }
 
 .theme-dot:hover { transform: scale(1.15); }
-
 .theme-dot.active { border-color: #fff; }
-
 .theme-dot.dot-lazada { background: #f57224; }
 .theme-dot.dot-blibli { background: #0071ce; }
 .theme-dot.dot-tokped { background: #03ac0e; }
@@ -188,7 +186,7 @@ body.theme-tokped {
   margin-top: 2px;
 }
 
-/* ==== TOOLBAR (Search + Filter) ==== */
+/* ==== TOOLBAR ==== */
 .toolbar {
   display: flex;
   flex-direction: column;
@@ -310,9 +308,7 @@ body.theme-tokped {
   box-shadow: var(--shadow-hover);
 }
 
-.product-card.sold {
-  opacity: 0.7;
-}
+.product-card.sold { opacity: 0.7; }
 
 .card-image-wrap {
   position: relative;
@@ -328,11 +324,8 @@ body.theme-tokped {
   transition: transform 0.3s;
 }
 
-.product-card:hover .card-image {
-  transform: scale(1.05);
-}
+.product-card:hover .card-image { transform: scale(1.05); }
 
-/* Status Badge */
 .status-badge {
   position: absolute;
   top: 8px;
@@ -351,7 +344,6 @@ body.theme-tokped {
 .status-badge.promo { background: var(--badge-promo); }
 .status-badge.terjual { background: var(--badge-terjual); }
 
-/* Sold Overlay */
 .sold-overlay {
   position: absolute;
   inset: 0;
@@ -366,7 +358,6 @@ body.theme-tokped {
   z-index: 1;
 }
 
-/* Card Body */
 .card-body {
   padding: 10px 12px 14px;
   display: flex;
@@ -426,7 +417,7 @@ body.theme-tokped {
 
 .card-meta .dot { opacity: 0.5; }
 
-/* ==== STATE (Loading / Empty / Error) ==== */
+/* ==== STATE ==== */
 .loading-state,
 .empty-state,
 .error-state {
@@ -455,10 +446,7 @@ body.theme-tokped {
   margin: 0 auto 6px;
 }
 
-.error-hint {
-  font-size: 12px;
-  color: var(--muted);
-}
+.error-hint { font-size: 12px; color: var(--muted); }
 
 .error-hint code {
   background: var(--bg);
@@ -478,9 +466,7 @@ body.theme-tokped {
   margin: 0 auto 12px;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ==== FOOTER ==== */
 .footer {
@@ -574,27 +560,10 @@ body.theme-tokped {
   box-shadow: 0 6px 20px rgba(37,211,102,0.55);
 }
 
-.floating-wa-icon {
-  font-size: 24px;
-}
-
-/* ==== RESPONSIVE ==== */
-@media (max-width: 640px) {
-  .hero { padding: 28px 0 24px; }
-  .hero-title { font-size: 22px; }
-  .hero-sub { font-size: 13px; }
-  .stat-num { font-size: 18px; }
-  .stat { padding: 8px 14px; min-width: 80px; }
-  .brand-name { font-size: 16px; }
-  .brand-icon { font-size: 18px; }
-}
-
-/* ==== UTILITY ==== */
-[hidden] { display: none !important; }
+.floating-wa-icon { font-size: 24px; }
 
 /* ============================================================
-   DETAIL PRODUK — tambahan untuk product/*.html
-   Paste di paling bawah style.css
+   DETAIL PRODUK (product/*.html)
    ============================================================ */
 
 /* ==== BREADCRUMB ==== */
@@ -625,7 +594,7 @@ body.theme-tokped {
   text-overflow: ellipsis;
 }
 
-/* ==== PRODUCT HERO (2 kolom) ==== */
+/* ==== PRODUCT HERO ==== */
 .product-hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -666,9 +635,7 @@ body.theme-tokped {
   transition: transform 0.3s;
 }
 
-.detail-main-image-wrap:hover .detail-main-image {
-  transform: scale(1.03);
-}
+.detail-main-image-wrap:hover .detail-main-image { transform: scale(1.03); }
 
 .detail-badge {
   position: absolute;
@@ -747,7 +714,6 @@ body.theme-tokped {
 .detail-meta .dot { opacity: 0.4; }
 .detail-meta strong { color: var(--text); font-weight: 600; }
 
-/* Price block */
 .detail-price-block {
   background: var(--primary-light);
   padding: 16px;
@@ -791,7 +757,6 @@ body.theme-tokped {
   margin-top: 6px;
 }
 
-/* Trust badges */
 .detail-trust {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -812,16 +777,53 @@ body.theme-tokped {
   text-align: center;
 }
 
-.trust-icon {
-  font-size: 18px;
-}
+.trust-icon { font-size: 18px; }
 
-/* CTA buttons */
 .detail-cta {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-top: 4px;
+}
+
+/* ==== BUTTONS ==== */
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-outline:hover { background: var(--primary-light); }
+
+.btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
 }
 
 /* ==== DETAIL SECTION ==== */
@@ -854,7 +856,6 @@ body.theme-tokped {
   border-radius: 2px;
 }
 
-/* ==== DETAIL DESC ==== */
 .detail-desc {
   font-size: 14px;
   line-height: 1.75;
@@ -872,13 +873,8 @@ body.theme-tokped {
   font-size: 13.5px;
 }
 
-.detail-spec-table tr {
-  border-bottom: 1px solid var(--border);
-}
-
-.detail-spec-table tr:last-child {
-  border-bottom: none;
-}
+.detail-spec-table tr { border-bottom: 1px solid var(--border); }
+.detail-spec-table tr:last-child { border-bottom: none; }
 
 .detail-spec-table td {
   padding: 12px 4px;
@@ -910,9 +906,7 @@ body.theme-tokped {
   line-height: 1.5;
 }
 
-.detail-check-list li:last-child {
-  border-bottom: none;
-}
+.detail-check-list li:last-child { border-bottom: none; }
 
 .detail-check-list li::before {
   content: "✓";
@@ -931,7 +925,6 @@ body.theme-tokped {
   justify-content: center;
 }
 
-/* Minus list — tanda seru orange */
 .detail-minus-list li::before {
   content: "!";
   background: #f59e0b;
@@ -946,7 +939,7 @@ body.theme-tokped {
   border-top: 1px dashed var(--border);
 }
 
-/* ==== LIGHTBOX (kalau belum ada di style.css utama) ==== */
+/* ==== LIGHTBOX ==== */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1017,8 +1010,15 @@ body.theme-tokped {
   backdrop-filter: blur(8px);
 }
 
-/* ==== RESPONSIVE DETAIL ==== */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 640px) {
+  .hero { padding: 28px 0 24px; }
+  .hero-title { font-size: 22px; }
+  .hero-sub { font-size: 13px; }
+  .stat-num { font-size: 18px; }
+  .stat { padding: 8px 14px; min-width: 80px; }
+  .brand-name { font-size: 16px; }
+  .brand-icon { font-size: 18px; }
   .detail-title { font-size: 17px; }
   .detail-price { font-size: 24px; }
   .detail-price-block { padding: 14px; }
@@ -1029,3 +1029,6 @@ body.theme-tokped {
   .detail-check-list li::before { width: 18px; height: 18px; font-size: 11px; top: 10px; }
   .lb-btn { width: 40px; height: 40px; font-size: 18px; }
 }
+
+/* ==== UTILITY ==== */
+[hidden] { display: none !important; }
