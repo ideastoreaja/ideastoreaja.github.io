@@ -1,0 +1,58 @@
+{
+  "toko": {
+    "nama": "ideastore",
+    "tagline": "Komputer & laptop bekas berkualitas, siap pakai.",
+    "wa": "6289523698893",
+    "waDisplay": "+62 895-2369-8893",
+    "lokasi": "Cianjur, Jawa Barat"
+  },
+  "produk": [
+    {
+      "id": "z440",
+      "nama": "PC Workstation HP Z440 – Xeon E5 64GB RAM + Monitor Lenovo 32\" Full Set Rexus",
+      "kategori": "komputer",
+      "kondisi": "Bekas - Mulus",
+      "status": "ready",
+      "harga": 6500000,
+      "hargaCoret": 7200000,
+      "deskripsiSingkat": "Workstation HP Z440 original built-up, Xeon E5-1620 v4, RAM 64GB, siap tempur untuk rendering, editing, coding.",
+      "fotoUtama": "foto/z440/depan.jpg",
+      "foto": [
+        "foto/z440/depan.jpg",
+        "foto/z440/samping.jpg",
+        "foto/z440/dalam.jpg",
+        "foto/z440/monitor.jpg",
+        "foto/z440/aksesoris.jpg"
+      ],
+      "url": "product/z440.html",
+      "tanggal": "2026-09-28",
+      "spesifikasi": {
+        "Sistem / Motherboard": "HP Z440 Workstation (Original Built-Up)",
+        "Processor": "Intel Xeon E5-1620 v4 @ 3.50GHz (8 CPUs)",
+        "Memory (RAM)": "64 GB DDR4 (4× 16 GB)",
+        "VGA / Grafis": "AMD Radeon R9 370 Series (4 GB VRAM)",
+        "Penyimpanan": "HDD 2 TB (1 TB + 1 TB)",
+        "Sistem Operasi": "Windows 11 Pro 64-bit (Original / Aktif)"
+      },
+      "monitor": [
+        "Lenovo 32 Inch – layar lega, nyaman di mata",
+        "Cocok untuk editing, nonton, kerja harian"
+      ],
+      "aksesoris": [
+        "Keyboard: Rexus RX-K9E",
+        "Mouse: Rexus RX-108",
+        "Headset: Rexus Thundervox RX9"
+      ],
+      "kondisiDetail": [
+        "Semua fungsi hardware, slot, dan port normal 100%",
+        "Fisik mulus dan terawat"
+      ],
+      "kekurangan": [
+        "Storage masih HDD, bukan SSD (bisa upgrade sendiri)",
+        "GPU Radeon R9 370 – bukan untuk gaming AAA high setting",
+        "Windows 11 Pro aktif, tapi tanpa garansi resmi HP",
+        "Casing ada baret halus pemakaian wajar"
+      ]
+    }
+  ]
+}
